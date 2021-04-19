@@ -1,0 +1,204 @@
+/*table   dashboard*/
+
+#dashboard
+  {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+      width: 50%;
+    }
+  
+    #dashboard td, #dashboard th {
+      border: 1px solid rgb(15, 14, 14);
+      padding: 8px;
+    }
+    
+    #dashboard  tr:nth-child(even){background-color: #ddd;}
+    
+    #dashboard tr:hover {background-color: #ddd;}
+    
+    #dashboard th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #212221;
+      color: white;
+    }
+
+ /*table notapproved*/
+
+#notapproved
+  {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+  
+    #notapproved td, #notapproved th {
+      border: 1px solid rgb(173, 40, 40);
+      padding: 8px;
+    }
+    
+    #notapproved  tr:nth-child(even){background-color: #ddd;}
+    
+    #notapproved tr:hover {background-color: #ddd;}
+    
+    #notapproved th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #dd122d;
+      color: white;
+    }
+
+
+/*table pending*/
+    #pending
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+      }
+    
+      #pending td, #pending th {
+        border: 1px solid rgb(19, 9, 163);
+        padding: 8px;
+      }
+      
+      #pending  tr:nth-child(even){background-color: #ddd;}
+      
+      #pending tr:hover {background-color: #ddd;}
+      
+      #pending th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #1417a1;
+        color: white;
+      }
+ 
+      
+/*table approved*/
+#approved
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  #approved td, #approved th {
+    border: 1px solid rgb(25, 224, 18);
+    padding: 8px;
+  }
+  
+  #approved  tr:nth-child(even){background-color: #ddd;}
+  
+  #approved tr:hover {background-color: #ddd;}
+  
+  #approved th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0ecf18;
+    color: white;
+  }
+
+  /*table bookings*/
+#bookings
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  #bookings td, #bookings th {
+    border: 1px solid rgb(183, 34, 212);
+    padding: 8px;
+  }
+  
+  #bookings  tr:nth-child(even){background-color: #ddd;}
+  
+  #bookings tr:hover {background-color: #ddd;}
+  
+  #bookings th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #bf0ecf;
+    color: white;
+  }
+
+    /*table bookings-details*/
+#bookings-details
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  #bookings-details td, #bookings-details th {
+    border: 1px solid rgb(183, 34, 212);
+    padding: 8px;
+  }
+  
+  #bookings-details  tr:nth-child(even){background-color: #ddd;}
+  
+  #bookings-details tr:hover {background-color: #ddd;}
+  
+  #bookings-details th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #bf0ecf;
+    color: white;
+  }
+
+
+  /*table   managestudent*/
+    
+#managestudent {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+}
+    
+#managestudent td, #managestudent th {
+        border: 1px solid rgb(183, 34, 212);
+        padding: 8px;
+      }
+      
+#managestudent tr:nth-child(even){background-color: #ddd;}
+      
+#managestudent tr:hover {background-color: #ddd;}
+      
+#managestudent th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #bf0ecf;
+        color: white;
+}
+
+#edit {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#edit td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#edit tr:nth-child(even){background-color: #c52f2f;}
+
+#edit tr:hover {background-color: rgb(102, 46, 46);}
+
+#edit td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #283128;
+  color: white;
+}
+
+    

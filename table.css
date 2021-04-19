@@ -1,0 +1,156 @@
+/*table */
+
+#myprofile {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: left;
+  }
+
+  #myprofile td, #myprofile th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+  }
+  
+  #myprofile tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #myprofile tr:hover {background-color: #ddd;}
+  
+  #myprofile th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+   
+    background-color: #283128;
+    color: white;
+  }
+
+/*table updateprofile */
+
+#updateprofile {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  #updateprofile td, #updateprofile th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #updateprofile tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #updateprofile tr:hover {background-color: #ddd;}
+  
+  #updateprofile th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #283128;
+    color: white;
+  }
+
+  /*table updateprofile1 */
+
+#updateprofile1 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  #updateprofile1 td, #updateprofile1 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #updateprofile1 tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #updateprofile1 tr:hover {background-color: #ddd;}
+  
+  #updateprofile1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #283128;
+    color: white;
+  } 
+
+   /*table applybook */
+
+#applybook {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #applybook td, #applybook th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #applybook tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #applybook tr:hover {background-color: #ddd;}
+  
+  #applybook th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #283128;
+    color: white;
+   
+  }
+
+
+/*table   bookhistory*/
+
+#bookhistory
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  #bookhistory td, #bookhistory th {
+    border: 1px solid rgb(15, 14, 14);
+    padding: 8px;
+  }
+  
+  #bookhistory  tr:nth-child(even){background-color: #ddd;}
+  
+  #bookhistory tr:hover {background-color: #ddd;}
+  
+  #bookhistory th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #212221;
+    color: white;
+  }
+
+  /*table   bookhistory1*/
+
+#bookhistory1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  #bookhistory1 td, #bookhistory1 th {
+    border: 1px solid rgb(15, 14, 14);
+    padding: 8px;
+  }
+  
+  #bookhistory1  tr:nth-child(even){background-color: #ddd;}
+  
+  #bookhistory1 tr:hover {background-color: #ddd;}
+  
+  #bookhistory1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #212221;
+    color: white;
+  }
