@@ -60,12 +60,11 @@ if (strlen($_SESSION['emplogin']) == 0) {
 
     <body>
         <?php include('includes/header.php'); ?>
-
-        <?php include('includes/sidebar.php'); ?>
+   
         <div style="margin-left:15%">
 
             <div class="w3-container">
-
+            <a href="myprofile.php" class="button3">Back</a>
                 <h3 >Update Student Info</h3>
                 <div class="leftcolumn">
                     <div class="card">
@@ -112,14 +111,14 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                             <tr>
                                                 <td style="font-size:16px;"> <b> Email :</b> </td>
                                                 <td>
-                                                    <input name="eid" type="email" id="email" value="<?php echo htmlentities($result->EmailId); ?>" readonly autocomplete="off" required>
+                                                    <input name="eid" type="email" id="email" value="<?php echo htmlentities($result->EmailId); ?>"  required>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td style="font-size:16px;"> <b> Mobile number :</b> </td>
                                                 <td>
-                                                    <input id="mobileno" name="mobileno" type="tel" value="<?php echo htmlentities($result->Phonenumber); ?>" maxlength="10" autocomplete="off" required>
+                                                    <input id="mobileno" name="mobileno" type="tel" value="<?php echo htmlentities($result->Phonenumber); ?>"  required>
                                                 </td>
                                             </tr>
 
@@ -188,7 +187,8 @@ if (strlen($_SESSION['emplogin']) == 0) {
                 </div>
 
 
-                <a href="myprofile.php" class="button1">Back</a>
+                
+               
     </body>
 
     </html>
