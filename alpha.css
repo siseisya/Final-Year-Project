@@ -41,7 +41,7 @@ body {
 
 /*input type */
   input[type=text], select {
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -51,7 +51,7 @@ body {
   }
 
   input[type=password], select {
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -59,9 +59,31 @@ body {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+  input[type=tel] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  } 
   
+
+  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
   input[type=submit] {
-    width: 50%;
+    width: 100%;
     background-color: #91a391;
     color: white;
     padding: 12px 20px;
