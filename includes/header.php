@@ -91,7 +91,9 @@
   <a href="myprofile.php" class="button3">Profile</a>
   <a href="apply-book.php" class="button3">Bus Booking</a>
   <a href="vehicle.php" class="button3">Vehicle</a>
+  <a href="homepage.php" class="button3">Home</a>
   <a href="bookhistory.php" class="button3">Bus Booking History</a>
+  <a href="changepassword.php" class="button3">Change Password</a>
   <a href="logout.php" class="button3">Logout</a>
 
 
