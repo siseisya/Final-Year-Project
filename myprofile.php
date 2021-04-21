@@ -37,7 +37,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-        
 
         <div style="margin-left:15%">
 
