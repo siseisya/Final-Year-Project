@@ -64,11 +64,12 @@ function draw_calendar($month,$year){
 }
 
 /* sample usages */
-echo '<h2>April 2021</h2>';
-echo draw_calendar(4,2021);
 
 echo '<h2>May 2021</h2>';
 echo draw_calendar(5,2021);
+
+echo '<h2>June 2021</h2>';
+echo draw_calendar(6,2021);
 
 ?>
 
