@@ -88,8 +88,9 @@
   </div>
 
 
-  <a href="myprofile.php" class="button3">Profile</a>
-  <a href="apply-book.php" class="button3">Bus Booking</a>
+  <a href="myprofile.php" class="button3">My Profile</a>
+  <a href="apply-book.php" class="button3">Bus Booking Applications </a>
+  
   <a href="vehicle.php" class="button3">Vehicle</a>
   <a href="homepage.php" class="button3">Home</a>
   <a href="bookhistory.php" class="button3">Bus Booking History</a>
