@@ -76,7 +76,7 @@ if (isset($_POST['signin'])) {
             <tr>
 
             <tr>
-              <td><b>Username :</b> <input type="text" name="username" value="" required> </td>
+              <td><b>Email :</b> <input type="text" name="username" value="" required> </td>
             </tr>
 
             <tr>
