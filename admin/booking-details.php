@@ -59,14 +59,12 @@ if (strlen($_SESSION['alogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-        <?php include('includes/sidebar.php'); ?>
-
         <div style="margin-left:20%">
 
             <div class="w3-container">
 
                 <h3>Bus Applications Details</h3>
-                
+
                 <h4> <b>Borang UUM/SAC/11</b></h4>
 
                 <table id="bookings-details">
