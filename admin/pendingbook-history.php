@@ -18,7 +18,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="css/background-admin.css" rel="stylesheet" type="text/css" />
 
         <!-- Title -->
-        <title>Admin | Dashboard</title>
+        <title>Admin | Pending Bus Applicatoions </title>
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,25 +31,27 @@ if (strlen($_SESSION['alogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-        <?php include('includes/sidebar.php'); ?>
+        <a href="approvedbook-history.php" class="button3">Approved Bus Booking </a>
+        <a href="pendingbook-history.php" class="button3">Pending Bus Booking </a>
+        <a href="notapprovedbook-history.php" class="button3">Rejected Bus Booking </a>
 
         <div style="margin-left:20%">
 
             <div class="w3-container">
 
 
-                <h3>Bus Applications History</h3>
+                <h3>Pending Bus Applications History</h3>
                 <?php if ($msg) { ?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php } ?>
                 <table id="pending">
-                    
-                        <tr>
-                            <th>#</th>
-                            <th width="200">Student Name</th>
-                            <th width="120">Programme</th>
-                            <th width="180">Posting Date</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>                  
+
+                    <tr>
+                        <th>#</th>
+                        <th width="200">Student Name</th>
+                        <th width="120">Programme</th>
+                        <th width="180">Posting Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
 
                     <tbody>
                         <?php
@@ -94,9 +96,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                 </table>
             </div>
         </div>
-        
+
 
     </body>
 
     </html>
-<?php } ?> 
+<?php } ?>
