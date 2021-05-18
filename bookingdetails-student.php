@@ -45,42 +45,115 @@ if (strlen($_SESSION['emplogin']) == 0) {
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
+                                <table>
+                                    <?php
+                                    $eid = $_SESSION['emplogin'];
+                                    $sql = "SELECT * from  student where EmailId=:eid";
+                                    $query = $dbh->prepare($sql);
+                                    $query->bindParam(':eid', $eid, PDO::PARAM_STR);
+                                    $query->execute();
+                                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                    $cnt = 1;
+                                    if ($query->rowCount() > 0) {
+                                        foreach ($results as $result) {
 
-                                <?php if ($msg) { ?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php } ?>
-                                <table id="example" class="display responsive-table ">
+                                    ?>
+                                            <tr>
+                                                <td style="font-size:16px;"> <b>Student Name :</b></td>
+                                                <td><?php echo htmlentities($result->Fullname); ?></td>
+                                            </tr>
 
+                                            <tr>
+                                                <td style="font-size:16px;"><b> Matric :</b></td>
+                                                <td><?php echo htmlentities($result->Matric); ?></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="font-size:16px;"><b> Phone Number :</b></td>
+                                                <td><?php echo htmlentities($result->Phonenumber); ?></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="font-size:16px;"><b> Email Address :</b></td>
+                                                <td><?php echo htmlentities($result->EmailId); ?></td>
+                                            </tr>
+                                    <?php $cnt++;
+                                        }
+                                    } ?>
                                     <tbody>
+
                                         <?php
                                         $eid = $_SESSION['eid'];
-
-                                       
-                                        $sql = "SELECT * FROM trybook WHERE empid=eid";
-
-
+                                        $sql = "SELECT * from trybook where empid=:eid";
                                         $query = $dbh->prepare($sql);
                                         $query->bindParam(':eid', $eid, PDO::PARAM_STR);
-                                    
                                         $query->execute();
                                         $results = $query->fetchAll(PDO::FETCH_OBJ);
                                         $cnt = 1;
                                         if ($query->rowCount() > 0) {
                                             foreach ($results as $result) {
                                         ?>
-
                                                 <tr>
-                                                    <td style="font-size:16px;"> <b>Student Name :</b></td>
-                                                    <td>
-                                                        <?php echo htmlentities($result->Destination); ?></a></td>
-                                                    <td style="font-size:16px;"><b> Matric :</b></td>
-                                                    <td><?php echo htmlentities($result->Matric); ?></td>
+                                                    <td style="font-size:16px;"><b> Programme/Activity :</b></td>
+                                                    <td><?php echo htmlentities($result->Programme); ?></td>
+
+                                                    <td style="font-size:16px;"><b> Date :</b></td>
+                                                    <td>From <?php echo htmlentities($result->FromDate); ?></td>
 
                                                 </tr>
 
+                                                <tr>
 
-                                        <?php $cnt++;
+                                                    <td style="font-size:16px;"><b> Destination : </b></td>
+                                                    <td><?php echo htmlentities($result->Destination); ?></td>
+
+                                                    <td style="font-size:16px;"><b>Posting Date</b></td>
+                                                    <td colspan="5"><?php echo htmlentities($result->PostingDate); ?></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="font-size:16px;"><b>Booking Status :</b></td>
+                                                    <td colspan="5"><?php $stats = $result->Status;
+                                                                    if ($stats == 1) {
+                                                                    ?>
+                                                            <span style="color: green">Approved</span>
+                                                        <?php }
+                                                                    if ($stats == 2) { ?>
+                                                            <span style="color: red">Rejected</span>
+                                                        <?php }
+                                                                    if ($stats == 0) { ?>
+                                                            <span style="color: blue">Waiting for approval</span>
+                                                        <?php } ?>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="font-size:16px;"><b>Officer Remark: </b></td>
+                                                    <td colspan="5"><?php
+                                                                    if ($result->AdminRemark == "") {
+                                                                        echo "Waiting for Approval";
+                                                                    } else {
+                                                                        echo htmlentities($result->AdminRemark);
+                                                                    }
+                                                                    ?></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="font-size:16px;"><b>Admin Action taken date : </b></td>
+                                                    <td colspan="5"><?php
+                                                                    if ($result->AdminRemarkDate == "") {
+                                                                        echo "NA";
+                                                                    } else {
+                                                                        echo htmlentities($result->AdminRemarkDate);
+                                                                    }
+                                                                    ?></td>
+                                                </tr>
+                                    </tbody>
+
+                            <?php $cnt++;
                                             }
                                         } ?>
-                                    </tbody>
                                 </table>
                                 <button onclick="document.location='bookhistory1.php'">Back</button><br>
                                 <button onclick="window.print()">Print this page</button>
