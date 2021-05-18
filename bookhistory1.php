@@ -95,8 +95,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                         </td>
 
                                         <td><a href="bookingdetails-student.php?bookid=<?php echo htmlentities($result->lid); ?>" class="waves-effect waves-light btn blue m-b-xs"> Details</a></td>
-                                        <a href="editstudent.php?empid=<?php echo htmlentities($result->id); ?>" target="_blank">
-                                        <td><a href="editstudent.php?empid=<?php echo htmlentities($result->id); ?>" target="_blank"><?php echo htmlentities($result->FirstName . " " . $result->Fullname); ?>(<?php echo htmlentities($result->Matric); ?>)</a></td>
+                                       
                                     </tr>
 
                             <?php $cnt++;
