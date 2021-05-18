@@ -70,12 +70,15 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                 </td>
                                             </tr>
 
-
-
-
                                             <tr>
                                                 <td style="font-size:16px;"><b> Email :</b></td>
                                                 <td><?php echo htmlentities($result->EmailId); ?></td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td style="font-size:16px;"><b> Username :</b></td>
+                                                <td><?php echo htmlentities($result->Username); ?></td>
 
                                             </tr>
 
@@ -95,7 +98,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
 
 
                                             <tr>
-                                                <td style="font-size:16px;">  <b> School Of :</b></td>
+                                                <td style="font-size:16px;">  <b> College Of :</b></td>
                                                 <td><?php echo htmlentities($result->Faculty); ?></td>
 
                                             </tr>
@@ -109,12 +112,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                             <tr>
                                                 <td style="font-size:16px;">  <b> Address :</b></td>
                                                 <td><?php echo htmlentities($result->Address); ?></td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td style="font-size:16px;"><b> Type of : </b></td>
-                                                <td colspan="5"><?php echo htmlentities($result->TypeS); ?></td>
 
                                             </tr>
 
