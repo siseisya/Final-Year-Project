@@ -5,7 +5,7 @@ include('includes/dbconnect.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
-    // code for Inactive  employee    
+    // code for Inactive  student    
     if (isset($_GET['inid'])) {
         $id = $_GET['inid'];
         $status = 0;
@@ -14,7 +14,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
         $query->execute();
-        header('location:managestudent.php');
+        header('location:manage-student.php');
     }
 
     //code for active employee
@@ -26,7 +26,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
         $query->execute();
-        header('location:managestudent.php');
+        header('location:manage-student.php');
     }
 ?>
     <!DOCTYPE html>
@@ -39,7 +39,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 
         <!-- Title -->
-        <title>Admin | Dashboard</title>
+        <title>Admin | Manage Students</title>
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,24 +52,25 @@ if (strlen($_SESSION['alogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-        <?php include('includes/sidebar.php'); ?>
+        <a href="addstudents.php" class="button3">Add Students</a>
 
         <div style="margin-left:20%">
 
             <div class="w3-container">
 
                 <h3>Manage Student</h3>
-               
+
                 <table id="managestudent">
 
                     <tr>
-                        <th>Sr no</th>
+                        <th>#</th>
                         <th> Matric</th>
-                        <th>Username</th>
+                        <th>Full Name</th>
                         <th>Address</th>
                         <th>Status</th>
-                        <th>Reg Date</th>
-                        
+                        <th>Registration Date</th>
+                        <th>Action</th>
+                        <th>Status of Student</th>
                     </tr>
 
                     <tbody>
@@ -82,7 +83,8 @@ if (strlen($_SESSION['alogin']) == 0) {
                             foreach ($results as $result) {               ?>
                                 <tr>
                                     <td> <?php echo htmlentities($cnt); ?></td>
-                                    <td><?php echo htmlentities($result->Matric); ?></td>
+                                    <td><a href="viewstudents.php?empid=<?php echo htmlentities($result->id); ?>" target="_blank"> <?php echo htmlentities($result->Matric); ?></td>
+
                                     <td><?php echo htmlentities($result->Fullname); ?></td>
                                     <td><?php echo htmlentities($result->Address); ?></td>
                                     <td><?php $stats = $result->Status;
@@ -92,11 +94,21 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <?php } else { ?>
                                             <a class="waves-effect waves-red btn-flat m-b-xs">Inactive</a>
                                         <?php } ?>
-
-
                                     </td>
+
                                     <td><?php echo htmlentities($result->RegDate); ?></td>
-                                   
+                      
+                                    <td><a href="editstudent-details.php?empid=<?php echo htmlentities($result->id); ?>"> Edit </a></td>
+                                    <td><a href="editstudent-details.php?empid=<?php echo htmlentities($result->id); ?>"></a>
+                                        <?php if ($result->Status == 1) { ?>
+                                            <a href="manage-student1.php?inid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Are you sure you want to inactive this Employe?');" > 
+                                            <i class=" material-icons" title="Inactive">Click to Inactive</i>
+                                            <?php } else { ?>
+
+                                                <a href="manage-student1.php?id=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Are you sure you want to active this employee?');">
+                                                <i class=" material-icons" title="Active">Click to Active</i>
+                                                <?php } ?>
+                                    </td>
                                 </tr>
                         <?php $cnt++;
                             }
