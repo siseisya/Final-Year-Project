@@ -30,7 +30,9 @@ if (strlen($_SESSION['alogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-        <?php include('includes/sidebar.php'); ?>
+        <a href="approvedbook-history.php" class="button3">Approved Bus Booking </a>
+        <a href="pendingbook-history.php" class="button3">Pending Bus Booking </a>
+        <a href="notapprovedbook-history.php" class="button3">Rejected Bus Booking </a>
 
         <div style="margin-left:20%">
 
