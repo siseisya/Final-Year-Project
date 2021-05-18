@@ -66,7 +66,7 @@
           <a class="navbar-brand" href="#">Bus Booking System | Student | Student Accommodation Centre (SAC)</a>
           <?php
           $eid = $_SESSION['eid'];
-          $sql = "SELECT Fullname,Matric from student where id=:eid";
+          $sql = "SELECT Username,Matric from student where id=:eid";
           $query = $dbh->prepare($sql);
           $query->bindParam(':eid', $eid, PDO::PARAM_STR);
           $query->execute();
@@ -74,7 +74,7 @@
           $cnt = 1;
           if ($query->rowCount() > 0) {
             foreach ($results as $result) {               ?>
-              <a class="navbar-brand" href="#">User : <?php echo htmlentities($result->Fullname); ?></a>
+              <a class="navbar-brand" href="#">User : <?php echo htmlentities($result->Username); ?></a>
               <a class="navbar-brand" href="#">Matric : <?php echo htmlentities($result->Matric); ?></a>
 
           <?php }
@@ -87,14 +87,12 @@
     <p>Student Portal</p>
   </div>
 
-
+  <a href="homepage.php" class="button3">Home</a>
   <a href="myprofile.php" class="button3">My Profile</a>
   <a href="apply-book.php" class="button3">Bus Booking Applications </a>
-  
-  <a href="vehicle.php" class="button3">Vehicle</a>
-  <a href="homepage.php" class="button3">Home</a>
   <a href="bookhistory.php" class="button3">Bus Booking History</a>
   <a href="changepassword.php" class="button3">Change Password</a>
+  <a href="feedback.php" class="button3">Feedback</a>
   <a href="logout.php" class="button3">Logout</a>
 
 
