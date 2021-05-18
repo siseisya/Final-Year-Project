@@ -17,7 +17,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="css/table-alpha-admin.css" rel="stylesheet" type="text/css" />
 
         <!-- Title -->
-        <title>Admin | Dashboard</title>
+        <title>Admin | Rejected Bus Applications </title>
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,9 @@ if (strlen($_SESSION['alogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-        <?php include('includes/sidebar.php'); ?>
+        <a href="approvedbook-history.php" class="button3">Approved Bus Booking </a>
+        <a href="pendingbook-history.php" class="button3">Pending Bus Booking </a>
+        <a href="notapprovedbook-history.php" class="button3">Rejected Bus Booking </a>
 
         <div style="margin-left:20%">
 
