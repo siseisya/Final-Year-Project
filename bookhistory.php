@@ -33,7 +33,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-
+        <?php include('includes/sidebar.php'); ?>
 
         <div style="margin-left:20%">
 
@@ -41,7 +41,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                 <div class="leftcolumn" style="background-color:white;">
                     <div class="card">
 
-                        <h3>Update Student Info</h3>
+                        <h3>History Booking Applications</h3>
                         <section>
                             <table id="bookhistory" align="center">
 
