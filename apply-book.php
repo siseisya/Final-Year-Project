@@ -21,7 +21,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
         }
     }
 
-
     if (isset($_POST['apply'])) {
         $empid = $_SESSION['eid'];
         $vehicle = $_POST['vehicle'];
@@ -56,8 +55,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
             $error = "Something went wrong. Please try again";
         }
     }
-
-
 
 ?>
     <!DOCTYPE html>
