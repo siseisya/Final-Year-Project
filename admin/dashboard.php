@@ -40,8 +40,6 @@ if (strlen($_SESSION['alogin']) == 0) {
     <body>
         <?php include('includes/header.php'); ?>
 
-        <?php include('includes/sidebar.php'); ?>
-
         <div style="margin-left:20%">
 
             <div class="w3-container">
@@ -98,7 +96,7 @@ join student on trybook.empid=student.id order by lid desc limit 6";
 
                                         <tr>
                                             <td> <b><?php echo htmlentities($cnt); ?></b></td>
-                                            <td><a href="editstudent.php?empid=<?php echo htmlentities($result->id); ?>" target="_blank"><?php echo htmlentities($result->Fullname); ?>(<?php echo htmlentities($result->Matric); ?>)</a></td>
+                                            <td><a href="viewstudents.php?empid=<?php echo htmlentities($result->id); ?>" target="_blank"><?php echo htmlentities($result->Fullname); ?>(<?php echo htmlentities($result->Matric); ?>)</a></td>
                                             <td><?php echo htmlentities($result->Programme); ?></td>
                                             <td><?php echo htmlentities($result->PostingDate); ?></td>
                                             <td><?php $stats = $result->Status;
